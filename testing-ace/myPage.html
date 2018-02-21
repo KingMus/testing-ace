@@ -2,33 +2,28 @@
 <html lang="de">
 <head>
 <title>ACE in Action</title>
-<style type="text/css" media="screen">
-#editor {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-p {
-	color: blue;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="myStyle.css">
 </head>
 <body>
 
-	<h1>Hier große Überschrift</h1>
-	<br>
-	<p>hier ein wenig text
-	<div id="editor">System.out.println("HI");</div>
+	<section>
+		<h1>Hier große Überschrift</h1>
+		<br>
 
-	<script src="./ace/src/ace.js"
-		type="text/javascript" charset="utf-8"></script>
-	<script>
-		var editor = ace.edit("editor");
-		editor.setTheme("ace/theme/Eclipse");
-		editor.session.setMode("ace/mode/java");
-	</script>
+	</section>
+
+	<div id="editorContainer">
+		<div id="editor">System.out.println("HI");</div>
+	</div>
+
+	<p>
+		hier ein wenig text
+
+		<script src="./ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var editor = ace.edit("editor");
+			editor.setTheme("ace/theme/Eclipse");
+			editor.session.setMode("ace/mode/java");
+		</script>
 </body>
 </html>
