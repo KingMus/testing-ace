@@ -13,17 +13,31 @@
 	</section>
 
 	<div id="editorContainer">
-		<div id="editor">System.out.println("HI");</div>
+		<div id="editor">System.out.println("I am Ace");</div>
 	</div>
 
 	<p>
 		Bitte gib in den obigen Texteditor deinen gewünschten Java-Code ein.
+		<br> <br> 
+		
+		<a href="javascript:outputCode();" class=code>Code ausgeben!</a>
+		<br> <br> <br> 
+		
+		Hier wird dein Output angezeigt:
+		<br> 
+		
+		<p id="demo" class=output></p>
 
 		<script src="./ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			var editor = ace.edit("editor");
 			editor.setTheme("ace/theme/katzenmilch");
 			editor.session.setMode("ace/mode/java");
+			
+			function outputCode(){
+				document.getElementById("demo").innerHTML = editor.getValue();
+			}
+			
 		</script>
 </body>
 </html>

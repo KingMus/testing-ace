@@ -16,6 +16,24 @@
 	border: 1px solid #000000;
 }
 
+.code {
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    color: #FFF;
+    padding: 10px;
+    background: #729fcf;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.code:hover {
+    background: #3465a4;
+}
+
+.output {
+	color: red;
+}
+
 p {
 	color: blue;
 }
